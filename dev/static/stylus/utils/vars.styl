@@ -1,0 +1,51 @@
+@import 'utils/fonts.styl'
+@import 'utils/mixins.styl'
+
+// ЦВЕТА
+$main_color = #35be70
+$auxiliary_txt_color = #443133
+$main_txt_color = #262626
+$main_bg_color = #fff
+
+// РАЗМЕРЫ
+$baseFontSize = 16px
+
+// ШРИФТЫ
+$font_main_regular = "RobotoRegular",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+
+// КНОПКИ
+.main_btn
+	min-width: 272px
+	height: 49px
+	padding: 0 5px
+	border: 1px solid transparent
+	background-color: $main_color
+	text-transform: none
+	border-radius: 5px
+	font(#fff, 16, $font_main_regular)
+	line-height: 45px
+	transition: 0.5s
+	&:hover
+		background-color: #fff
+		border: 1px solid $main_color
+		color: $main_txt_color
+		text-decoration: none
+		outline: 0
+	&:active
+		background-color: #fff
+		border: 1px solid $main_color
+		color: $main_txt_color
+		text-decoration: none
+		outline: 0
+	&:focus
+		background-color: #fff
+		border: 1px solid $main_color
+		color: $main_txt_color
+		text-decoration: none
+		outline: 0
+
+
+.flex-center
+	display: flex
+	align-items: center
+	justify-content: center

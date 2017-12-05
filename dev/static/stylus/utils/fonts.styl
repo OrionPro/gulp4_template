@@ -1,8 +1,13 @@
-@font-face
-	font-family: "RobotoRegular"
-	font-style: normal
-	font-weight: 400
-	src: url(../fonts/RobotoRegular/RobotoRegular.ttf) format("truetype")
-	src: url(../fonts/RobotoRegular/RobotoRegular.eot) format("embedded-opentype")
-	src: url(../fonts/RobotoRegular/RobotoRegular.eot?#iefix) format("embedded-opentype")
-	src: url(../fonts/RobotoRegular/RobotoRegular.woff) format("woff")
+// Fonts mixin
+
+webfont(family, folder, file, weight = normal, style = normal)
+	@font-face
+		font-family family
+		src url('../fonts/' + folder + '/' + file + '.eot')
+		src url('../fonts/' + folder + '/' + file + '.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/' + folder + '/' + file + '.woff') format('woff'),
+		url('../fonts/' + folder + '/' + file + '.ttf') format('truetype')
+		font-weight weight
+		font-style style
+
+webfont('RobotoRegular', 'RobotoRegular', 'RobotoRegular')

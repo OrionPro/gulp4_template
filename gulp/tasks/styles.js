@@ -1,6 +1,6 @@
 module.exports = function () {
     $.gulp.task('styles:build', () => {
-        return $.gulp.src('./dev/static/stylus/main.styl')
+        return $.gulp.src('./dev/stylus/main.styl')
             .pipe($.gp.stylus({
                 'include css': true
             }))
@@ -9,11 +9,11 @@ module.exports = function () {
             }))
             .pipe($.gp.csscomb())
             .pipe($.gp.csso())
-            .pipe($.gulp.dest('./build/static/css/'))
+            .pipe($.gulp.dest('./build/css/'))
     });
 
     $.gulp.task('styles:dev', () => {
-        return $.gulp.src('./dev/static/stylus/main.styl')
+        return $.gulp.src('./dev/stylus/main.styl')
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.stylus({
                 'include css': true
@@ -28,7 +28,7 @@ module.exports = function () {
             .pipe($.gp.autoprefixer({
                 browsers: ['last 3 version']
             }))
-            .pipe($.gulp.dest('./build/static/css/'))
+            .pipe($.gulp.dest('./build/css/'))
             .pipe($.browserSync.reload({
                 stream: true
             }));

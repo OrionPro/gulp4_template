@@ -1,0 +1,377 @@
+
+
+/* Transition Layer */
+.cd-transition-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.cd-transition-layer .bg-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-2%);
+          transform: translateY(-50%) translateX(-2%);
+  /* its dimentions will be overwritten using jQuery to proportionally fit the viewport */
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.cd-transition-layer.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.cd-transition-layer.visible .bg-layer {
+  -webkit-transform: translateY(-50%) translateX(-98%);
+          transform: translateY(-50%) translateX(-98%);
+}
+.cd-transition-layer.opening .bg-layer, .cd-transition-layer.closing .bg-layer {
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.no-cssanimations .cd-transition-layer {
+  display: none;
+}
+/* -------------------------------- 
+
+ink Effect
+
+-------------------------------- */
+.ink-transition .cd-transition-layer .bg-layer {
+  /* our sprite is composed of 25 frames */
+  width: 2500%;
+  background: url(../img/anim-modal-ink.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.ink-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.7s steps(24);
+  -moz-animation: cd-sequence 0.7s steps(24);
+  animation: cd-sequence 0.7s steps(24);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.ink-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence-reverse 0.5s steps(24);
+  -moz-animation: cd-sequence-reverse 0.5s steps(24);
+  animation: cd-sequence-reverse 0.5s steps(24);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+/* -------------------------------- 
+
+Scrub Effect
+
+-------------------------------- */
+.scrub-transition .cd-transition-layer .bg-layer {
+  /* sprite composed of 25 frames */
+  width: 2500%;
+  background-image: url(../img/anim-modal-scrub.png);
+}
+.scrub-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards;
+          animation: cd-sequence 0.8s steps(24) forwards;
+}
+.scrub-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards reverse;
+          animation: cd-sequence 0.8s steps(24) forwards reverse;
+}
+
+
+/* -------------------------------- 
+
+Fire Extinguisher Effect
+
+-------------------------------- */
+
+.extinguisher-transition .cd-transition-layer .bg-layer {
+  /* sprite composed of 25 frames */
+  width: 2500%;
+  background-image: url(../img/anim-modal-extinguisher.png);
+}
+.extinguisher-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards;
+          animation: cd-sequence 0.8s steps(24) forwards;
+}
+.extinguisher-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards reverse;
+          animation: cd-sequence 0.8s steps(24) forwards reverse;
+}
+
+
+/* -------------------------------- 
+
+Glitch Effect
+
+-------------------------------- */
+.glitch-transition .cd-transition-layer .bg-layer {
+  /* sprite composed of 25 frames */
+  width: 2500%;
+  background-image: url(../img/anim-modal-glitch.png);
+}
+.glitch-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards;
+          animation: cd-sequence 0.8s steps(24) forwards;
+}
+.glitch-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards reverse;
+          animation: cd-sequence 0.8s steps(24) forwards reverse;
+}
+
+
+/* -------------------------------- 
+
+Scribble Effect
+
+-------------------------------- */
+.scribble-transition .cd-transition-layer .bg-layer {
+  -webkit-transform: translateY(-50%) translateX(-1.3158%);
+          transform: translateY(-50%) translateX(-1.3158%);
+  /* sprite composed of 38 frames */
+  width: 3800%;
+  background-image: url(../img/anim-modal-scribble.png);
+}
+.scribble-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence-2 0.8s steps(37) forwards;
+          animation: cd-sequence-2 0.8s steps(37) forwards;
+}
+.scribble-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence-2 0.8s steps(37) forwards reverse;
+          animation: cd-sequence-2 0.8s steps(37) forwards reverse;
+}
+.scribble-transition .cd-transition-layer.visible .bg-layer {
+  -webkit-transform: translateY(-50%) translateX(-98.6842%);
+          transform: translateY(-50%) translateX(-98.6842%);
+}
+
+/* -------------------------------- 
+
+Gummy Effect
+
+-------------------------------- */
+.gummy-transition .cd-transition-layer .bg-layer {
+  /* sprite composed of 25 frames */
+  width: 2500%;
+  background-image: url(../img/anim-modal-gummy.png);
+}
+.gummy-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards;
+          animation: cd-sequence 0.8s steps(24) forwards;
+}
+.gummy-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards reverse;
+          animation: cd-sequence 0.8s steps(24) forwards reverse;
+}
+
+/* -------------------------------- 
+
+Gooey Effect
+
+-------------------------------- */
+.gooey-transition .cd-transition-layer .bg-layer {
+  /* sprite composed of 25 frames */
+  width: 2500%;
+  background-image: url(../img/anim-modal-gooey.png);
+}
+.gooey-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards;
+          animation: cd-sequence 0.8s steps(24) forwards;
+}
+.gooey-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards reverse;
+          animation: cd-sequence 0.8s steps(24) forwards reverse;
+}
+
+/* -------------------------------- 
+
+Mirror Effect
+
+-------------------------------- */
+.mirror-transition {
+  color: #ffffff;
+}
+.mirror-transition .cd-transition-layer .bg-layer {
+  /* sprite composed of 25 frames */
+  width: 2500%;
+  background-image: url(../img/anim-modal-mirror.png);
+}
+.mirror-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards;
+          animation: cd-sequence 0.8s steps(24) forwards;
+}
+.mirror-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards reverse;
+          animation: cd-sequence 0.8s steps(24) forwards reverse;
+}
+
+/* -------------------------------- 
+
+Diamond Effect
+
+-------------------------------- */
+.diamond-transition .cd-transition-layer .bg-layer {
+  -webkit-transform: translateY(-50%) translateX(-2.5%);
+          transform: translateY(-50%) translateX(-2.5%);
+  /* sprite composed of 20 frames */
+  width: 2000%;
+  background-image: url(../img/anim-modal-diamond.png);
+}
+.diamond-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence-3 0.8s steps(19) forwards;
+          animation: cd-sequence-3 0.8s steps(19) forwards;
+}
+.diamond-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence-3 0.8s steps(19) forwards reverse;
+          animation: cd-sequence-3 0.8s steps(19) forwards reverse;
+}
+.diamond-transition .cd-transition-layer.visible .bg-layer {
+  -webkit-transform: translateY(-50%) translateX(-97.5%);
+          transform: translateY(-50%) translateX(-97.5%);
+}
+
+/* -------------------------------- 
+
+Cartoon Effect
+
+-------------------------------- */
+
+.cartoon-transition .cd-transition-layer .bg-layer {
+  /* sprite composed of 25 frames */
+  width: 2500%;
+  background-image: url(../img/anim-modal-cartoon.png);
+}
+.cartoon-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards;
+          animation: cd-sequence 0.8s steps(24) forwards;
+}
+.cartoon-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards reverse;
+          animation: cd-sequence 0.8s steps(24) forwards reverse;
+}
+
+/* -------------------------------- 
+
+Clones Effect
+
+-------------------------------- */
+
+.clones-transition .cd-transition-layer .bg-layer {
+  /* sprite composed of 25 frames */
+  width: 2500%;
+  background-image: url(../img/anim-modal-clones.png);
+}
+.clones-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards;
+          animation: cd-sequence 0.8s steps(24) forwards;
+}
+.clones-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards reverse;
+          animation: cd-sequence 0.8s steps(24) forwards reverse;
+}
+
+/* -------------------------------- 
+
+Kaleidoscope Effect
+
+-------------------------------- */
+.kaleidoscope-transition .cd-transition-layer .bg-layer {
+  /* sprite composed of 25 frames */
+  width: 2500%;
+  background-image: url(../img/anim-modal-kaleidoscope.png);
+}
+.kaleidoscope-transition .cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards;
+          animation: cd-sequence 0.8s steps(24) forwards;
+}
+.kaleidoscope-transition .cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24) forwards reverse;
+          animation: cd-sequence 0.8s steps(24) forwards reverse;
+}
+
+
+/* -------------------------------- 
+
+Animations
+
+-------------------------------- */
+@-webkit-keyframes cd-sequence {
+  0% {
+    /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
+    -webkit-transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
+    -webkit-transform: translateY(-50%) translateX(-98%);
+  }
+}
+@-moz-keyframes cd-sequence {
+  0% {
+    /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
+    -moz-transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
+    -moz-transform: translateY(-50%) translateX(-98%);
+  }
+}
+@keyframes cd-sequence {
+  0% {
+    /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
+    -webkit-transform: translateY(-50%) translateX(-2%);
+    -moz-transform: translateY(-50%) translateX(-2%);
+    -ms-transform: translateY(-50%) translateX(-2%);
+    -o-transform: translateY(-50%) translateX(-2%);
+    transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
+    -webkit-transform: translateY(-50%) translateX(-98%);
+    -moz-transform: translateY(-50%) translateX(-98%);
+    -ms-transform: translateY(-50%) translateX(-98%);
+    -o-transform: translateY(-50%) translateX(-98%);
+    transform: translateY(-50%) translateX(-98%);
+  }
+}
+@-webkit-keyframes cd-sequence-reverse {
+  0% {
+    -webkit-transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) translateX(-2%);
+  }
+}
+@-moz-keyframes cd-sequence-reverse {
+  0% {
+    -moz-transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    -moz-transform: translateY(-50%) translateX(-2%);
+  }
+}
+@keyframes cd-sequence-reverse {
+  0% {
+    -webkit-transform: translateY(-50%) translateX(-98%);
+    -moz-transform: translateY(-50%) translateX(-98%);
+    -ms-transform: translateY(-50%) translateX(-98%);
+    -o-transform: translateY(-50%) translateX(-98%);
+    transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) translateX(-2%);
+    -moz-transform: translateY(-50%) translateX(-2%);
+    -ms-transform: translateY(-50%) translateX(-2%);
+    -o-transform: translateY(-50%) translateX(-2%);
+    transform: translateY(-50%) translateX(-2%);
+  }
+}

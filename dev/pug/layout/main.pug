@@ -11,19 +11,61 @@ html(lang="ru-RU")
 		<![endif]-->
 		meta(name="viewport" content="width=device-width,initial-scale=1")
 		meta(name="keywords" content="")
-
-		link(rel="stylesheet" type='text/css' href="static/css/main.css")
+		link(rel="shortcut icon" href="img/general/favicon.png" type="image/x-icon")
+		link(rel="stylesheet" type='text/css' href="css/main.css")
 
 		<!--[if lt IE 9]>
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 		<![endif]-->
+		include ../../libs/bootstrap.min.html
+		style(type='text/css').
+			html .loader {
+				background: #fff;
+				bottom: 0;
+				height: 100%;
+				left: 0;
+				position: fixed;
+				right: 0;
+				top: 0;
+				width: 100%;
+				z-index: 9999
+			}
+
+			html .loader .loader_inner {
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-color: #fff;
+				height: 200px;
+				width: 200px;
+				margin-top: -100px;
+				margin-left: -100px;
+				left: 50%;
+				top: 50%;
+				position: absolute
+			}
 	body(class=pageClass)
+		div
+			.loader
+				.loader_inner
+					include ../../img/preloader.svg
+		nav(canvas="" class="")
+			.mnu_btn
+				label(id="nav-button-label")
+					#nav-lines
+						i.nav-line
+						i.nav-line
+						i.nav-line
+						i.nav-line
+
+		div(canvas='container')
 		.wrapper
+			img(src="img")
 			include ../modules/header
 			.content
 				block content
 			include ../modules/footer
-		script(src="static/js/jquery.js")
-		script(src="static/js/libs.min.js")
-		script(src="static/js/main.js")
+		script(src="js/jquery.js")
+		script(src="js/libs.min.js")
+		script(src="js/main.js")
 		block script

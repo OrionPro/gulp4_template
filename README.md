@@ -5,3 +5,4 @@
 3. gulp# gulp4_template
 
 Основа взята из https://github.com/FARCER/gulp4start
+Видео по шаблону https://www.youtube.com/watch?v=pkeihmGpP1c

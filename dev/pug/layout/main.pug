@@ -18,37 +18,16 @@ html(lang="ru-RU")
 		<!--[if lt IE 9]>
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 		<![endif]-->
-		style(type='text/css').
-			html .loader {
-				background: #fff;
-				bottom: 0;
-				height: 100%;
-				left: 0;
-				position: fixed;
-				right: 0;
-				top: 0;
-				width: 100%;
-				z-index: 9999
-			}
-
-			html .loader .loader_inner {
-				background-size: cover;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-color: #fff;
-				height: 200px;
-				width: 200px;
-				margin-top: -100px;
-				margin-left: -100px;
-				left: 50%;
-				top: 50%;
-				position: absolute
-			}
 	body(class=pageClass)
 		div
 			.loader
 				.loader_inner
 					include ../../img/preloader.svg
+		block modal
+			include modal
+		// Элемент cd-transition-layer это тоже для прикольной анимации модалки
+		.cd-transition-layer
+			.bg-layer
 		nav(canvas="" class="")
 			.mnu_btn
 				label(id="nav-button-label")
@@ -59,14 +38,19 @@ html(lang="ru-RU")
 						i.nav-line
 
 		div(canvas='container')
-		+b.wrapper
 			include ../modules/header
-			+icon('google-plus')
-			+icon('vk')
-			+e.content
-				block content
+			block main
 			include ../modules/footer
-		script(src="js/jquery.js")
+		div(off-canvas='id-1 left shift')
+			nav.header_nav_mobile
+				ul.menu
+					-var obj1 = [{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 38 425 961 68', href:'tel:73842596168'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'Примеры', href:'#'}];
+					each i in obj1
+						li
+							a(href=i.href)= i.title
+		div(off-canvas='id-2 right push')
+		div(off-canvas='id-3 top overlay')
+		div(off-canvas='id-4 bottom shift')
 		script(src="js/libs.min.js")
 		script(src="js/main.js")
 		block script

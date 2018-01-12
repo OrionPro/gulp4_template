@@ -1,0 +1,77 @@
+//Модальное окно
+#popup.mfp-hide.white-popup.mfp-with-anim.popup
+	p.success_mail Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами свяжется.
+	form
+		p.modal-title.
+			Введите данные
+		p.modal-paragraph.
+			и мы Вам перезвоним
+		div
+			.input_wrap
+				i.fa.fa-check
+				input(name="name" type="text" placeholder="Имя")
+			.input_wrap
+				i.fa.fa-check
+				input(name="phone" type="tel" placeholder="Введите свой телефон")
+			.input_wrap
+				i.fa.fa-check
+				input(name="phone_mask" type="tel" class="mask" placeholder="+38(___) ___-__-__")
+			.input_wrap
+				i.fa.fa-check
+				input(name="email" type="email" placeholder="E-mail")
+			.input_wrap
+				i.fa.fa-check
+				textarea(name="textarea" type="text" placeholder="Описание заяки")
+			.select
+				.slct_arrow
+					i.fa.fa-angle-down
+				a(href="#" class="slct") Выбор заголовков:
+				ul.drop
+					li Вы крутые
+					li Вы крутые
+					li Я в Вас влюбился
+					li Я в Вас влюбился
+					li Быстрей Вас только Флеш
+					li Быстрей Вас только Флеш
+					li Быстрей Вас только Флеш
+				input(type="hidden" name="services")
+			.select
+				.slct_arrow
+					i.fa.fa-angle-down
+				a(href="#" class="slct") Выбор заголовков:
+				ul.drop
+					li Вы крутые
+					li Я в Вас влюбился
+					li Быстрей Вас только Флеш
+				input(type="hidden" name="services")
+		input(type="hidden" name="form_name" value="")
+		input(type="hidden" name="form_type" value="modal")
+		input(type="submit" value="Отправить")
+	.overlay
+// Модальное окно success
+#popup-success.mfp-hide.white-popup.mfp-with-anim.popup
+	p.success_mail Заявка отправлена
+// вариант меню на мобильном
+#popup3.mfp-hide.white-popup.mfp-with-anim.popup
+	nav.header_nav_mobile
+		ul
+			li
+				a(href='#') Примеры кухонь
+			li
+				a(href='#') Преимущества
+			li
+				a(href='#') Отзывы
+			li
+				a(href='tel:73842596168') +7 3842 59 61 68
+			li
+				a(href='#') Примеры кухонь
+			li
+				a(href='#') Преимущества
+			li
+				a(href='#') Отзывы
+			li
+				a(href='#') Примеры кухонь
+			li
+				a(href='#') Преимущества
+
+

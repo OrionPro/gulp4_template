@@ -1,4 +1,129 @@
-h1
-	font(main_txt_color, 20, $font_main_regular, 1.2)
-	span
-		color blue
+// Секция top-section
+.top-section
+	text-align: center
+	min-height: 660px
+	height: 100vh
+	background: url(../img/header_bg.jpg) no-repeat
+	background-size: cover
+	.container
+		height: 100%
+		min-height: 100%
+		.row
+			height: 100%
+			min-height: 100%
+			flex-direction: column
+			align-items: center
+.top-section__title
+	margin-top: 115px
+	flex: 1 auto
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-end
+	p
+		fz(30)
+		color: #fff
+
+.top-section__bot-txt
+	margin-top: 50px
+	flex: 1 0 auto
+	p
+		fz(25)
+		color: #fff
+	.is-sticky
+		p
+			margin: auto
+			left: 0
+			right: 0
+			z-index: 1000 !important
+			background: #000
+// Секция our_advantages
+.our-advantages
+	min-height: 630px
+	background-color: #fff
+	padding-top: 75px
+	.our-advantages__title
+		margin-bottom: 10px
+		text-align: center
+		h2
+			color: #626262
+			text-align: center
+			font-size: 35px
+	.our-advantages__item
+		margin-bottom: 30px
+		min-height: 230px
+		h3
+			font-size: 26px
+			text-align: center
+		p
+			margin-top: 15px
+			fz(16)
+			line-height: 1.2
+			text-align: center
+		.our-advantages__img
+			text-align: center
+			i
+				fz(72)
+				color: #00b6f4
+// Секция main_content
+.main-content
+	text-align: center
+	.owl-carousel.owl-drag .owl-item
+		min-height: 300px
+		background-color: #00b6f4
+		display: flex
+		align-items: center
+		justify-content: center
+	.swiper-container
+		width: 100%
+		height: 300px
+		.swiper-slide
+			display: flex
+			align-items: center
+			justify-content: center
+	.select2-wrap
+		width: 200px
+		margin: auto
+// Секция intermediate
+.intermediate
+	text-align: center
+	background-color: #00b6f4
+	padding-top: 50px
+	padding-bottom: 50px
+	.intermediate__title
+		max-width: 650px
+		margin: auto
+		color: #052243
+		h3
+			margin: 0
+			text-transform: uppercase
+			fz(24)
+			color: #052243
+	.intermediate__wrap
+		margin-top: 40px
+		form
+			.intermediate__item
+				margin-bottom: 20px
+				input
+					width: 100%
+					display: inline-block
+					border: 1px solid #a2b6c9
+					background: #fff
+					color: #43637f
+					height: 40px
+					padding: 0 0 0 9px
+					&::-webkit-input-placeholder
+						color: #43637f
+					&:-moz-placeholder
+						color: #43637f
+					&::-moz-placeholder
+						color: #43637f
+					&:-ms-input-placeholder
+						color: #43637f
+				input[type=submit]
+					background: #fff
+					color: #43637f
+
+//	Секция
+//	Секция
+//	Секция

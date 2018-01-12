@@ -4,9 +4,169 @@ block variables
 	- var title = 'Главная страница'
 	- var pageClass = 'index-page'
 
-block content
-	+b.main-test
-		+e.title
-			h1 Проверка
-				span  мда
-	button(type="button" class="main_btn") Тест
+block main
+	+b.SECTION.top-section
+		.container
+			.row
+				+e.title
+					h1
+						span ФУНКЦИОНАЛЬНЫЕ
+						|  ЛЕНДИНГИ НА ЗАКАЗ
+					p для максимального удобства
+					a(href="#" class="main_btn") проверка
+					hr
+					button.open-popup-link.main_btn(data-effect="mfp-zoom-in" data-mfp-src="#popup") проверка
+				+e.bot-txt
+					p.sticky Более
+						span  400
+						|   довольных клиентов за
+						span  8 лет
+						|  успешной работы!
+	// Секция  our_advantages
+	+b.SECTION#our_advantages.our-advantages
+		.container
+			+e.title
+				h2 Наши преимущества
+				img(src="img/garant.svg")
+			.row
+				+e.item.col-lg-4.col-md-6
+					.our-advantages__img
+						i.fa.fa-users
+					h3 Заголовок
+					p Индивидуальный подход к каждому клиенту
+				+e.item.col-lg-4.col-md-6
+					+e.img
+						i.fa.fa-diamond
+					h3 Заголовок
+					p Неповторимость и практичность каждого проекта мебели
+				+e.item.col-lg-4.col-md-6
+					+e.img
+						i.fa.fa-list-ol
+					h3 Заголовок
+					p Многообразие материалов и стилевых решений
+				+e.item.col-lg-4.col-md-6
+					+e.img
+						i.fa.fa-pencil
+					h3 Заголовок
+					p Для вас бесплатно: замер, дизайн-проект, доставка и монтаж
+				+e.item.col-lg-4.col-md-6
+					+e.img
+						i.fa.fa-credit-card-alt
+					h3 Заголовок
+					p Возможность оформления мебели в кредит
+				+e.item.col-lg-4.col-md-6
+					+e.img
+						i.fa.fa-wrench
+					h3 Заголовок
+					p Изготовление мебели только из высококачественных материалов
+	// Секция main_content
+	+b.SECTION.main-content
+		.container
+			h2 OWL Слайдер
+			.owl-carousel.owl-theme
+				.item
+					h3 Слайдер 1
+				.item
+					h3 Слайдер 2
+			h2 Swiper
+			.swiper-container
+				.swiper-wrapper
+					.swiper-slide Slide 1
+					.swiper-slide Slide 2
+					.swiper-slide Slide 3
+					.swiper-slide Slide 4
+					.swiper-slide Slide 5
+					.swiper-slide Slide 6
+					.swiper-slide Slide 7
+					.swiper-slide Slide 8
+					.swiper-slide Slide 8
+					.swiper-slide Slide 10
+				.swiper-pagination
+			div Пример checkbox
+			label.check.noselect
+				input(type='checkbox')
+				i.fa.fa-1.fa-square-o
+				i.fa.fa-2.fa-check-square-o
+				span первый чек
+			label.check.noselect
+				input(type='checkbox')
+				i.fa.fa-1.fa-square-o
+				i.fa.fa-2.fa-check-square-o
+				span второй чек
+			div Пример radio button
+			label.radio.noselect
+				input(type='radio', name='radio')
+				i.fa.fa-1.fa-square-o
+				i.fa.fa-2.fa-check-square-o
+				span первый чек
+			label.radio.noselect
+				input(type='radio', name='radio', checked='')
+				i.fa.fa-1.fa-square-o
+				i.fa.fa-2.fa-check-square-o
+				span второй чек
+			h3 Пример Select на плагине Select2
+				h4 с тегами
+				.select2-wrap
+					select.select2-tags.form-control(multiple)
+						option angular
+						option react
+						option vui
+						option(disabled) ember
+						option backbone
+				h4 обычный
+				.select2-wrap
+					select.select2
+						option angular
+						option react
+						option vue
+						option(disabled) ember
+						option backbone
+						option angular
+						option react
+						option vue
+						option(disabled) ember
+						option backbone
+	// Секция  ask-form-title
+	+b.SECTION.intermediate
+		.container
+			+e.title
+				h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
+			+e.wrap
+				form#form-file.clearfix
+					.file_wrap
+						input(type='file' name='field' multiple)
+					.row
+						+e.item.col-lg-3.col-md-4.col-sm-4
+							.input_wrap
+								i.fa.fa-check
+								input(name='name', type='text', placeholder='Имя')
+						+e.item.col-lg-3.col-md-4.col-sm-4
+							.input_wrap
+								i.fa.fa-check
+								input(name='email', type='email', placeholder='Почта')
+						+e.item.col-lg-3.col-md-4.col-sm-4
+							.input_wrap
+								i.fa.fa-check
+								input(name='phone', type='tel', placeholder='Телефон')
+						input(type='hidden', name='form_name', value='')
+						input(type='hidden', name='form_type', value='normal')
+						+e.item.col-lg-3
+							input(type='submit', value='Записаться')
+			h3 Пример табов с вложенностью ещё одного таба
+			.tabs-items-wrap
+				button.main_btn.tabs-item.active Мужские размеры
+				button.main_btn.tabs-item Женские размеры
+			.tabs-wrap.active
+				p.
+					Lorem ipsum dolor sit amet, an eam simul albucius. An ius duis aeque suscipit, ius ullum suscipit eu. Detracto ponderum pertinacia ei his, nonumy omnium adipisci nec ei, ea ludus dictas fuisset qui.
+			.tabs-wrap
+				p.
+					Persius volumus est cu! Ad populo erroribus sed. Timeam legimus maiorum usu te, civibus detracto at vel. Accusata lobortis in sed, et tempor saperet qui. Eu timeam salutandi quaerendum his.
+				h4 Вложенный таб
+				.tabs-items-wrap-inner
+					button.main_btn.tabs-item.active Мужские размеры 2
+					button.main_btn.tabs-item Женские размеры 2
+					.tabs-wrap-inner.active
+						p Detracto ponderum pertinacia ei his, nonumy omnium adipisci nec ei, ea ludus dictas fuisset qui.
+					.tabs-wrap-inner
+						p Accusata lobortis in sed, et tempor saperet qui. Eu timeam salutandi quaerendum his.

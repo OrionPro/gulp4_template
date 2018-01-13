@@ -6,10 +6,9 @@ header(class="header")
 					Ваш Логотип
 			nav.header__nav
 				ul
-					-var links = [{title:'Blog', href:'blog.html'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 3842 59 61 68', href:'tel:73842596168'}];
-					each i in links
+					each link,title in nav.navPages
 						li
-							a(href=i.href)= i.title
+							a(href= link)= title
 			.header__modal
 				a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup" class="open-popup-link" title='Вызов стандартного модального окна') Обратный звонок
 			.header__modal.last

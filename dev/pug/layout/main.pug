@@ -44,10 +44,9 @@ html(lang="ru-RU")
 		div(off-canvas='id-1 left shift')
 			nav.header_nav_mobile
 				ul.menu
-					-var obj1 = [{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 38 425 961 68', href:'tel:73842596168'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'Примеры', href:'#'}];
-					each i in obj1
+					each link,title in nav.navPages
 						li
-							a(href=i.href)= i.title
+							a(href= link)= title
 		div(off-canvas='id-2 right push')
 		div(off-canvas='id-3 top overlay')
 		div(off-canvas='id-4 bottom shift')

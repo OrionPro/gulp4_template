@@ -2,3 +2,8 @@ mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/svg/symbol/sprite.svg#" + name)
+
+mixin list(id, ...items)
+	ul(id=id)
+		each item in items
+			li= item

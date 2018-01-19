@@ -19,7 +19,7 @@ module.exports = function() {
 			'dev/libs/slidebars.min.js',
 			'dev/libs/owl.carousel.min.js',
 			'dev/libs/jquery.sticky.js',
-			'dev/libs/jquery.mCustomScrollbar.concat.min.js',
+			//'dev/libs/jquery.mCustomScrollbar.concat.min.js',
 			'dev/libs/greenSock.js',
 			'dev/libs/DrawSVGPlugin.js'
 		])
@@ -44,12 +44,13 @@ module.exports = function() {
 			'node_modules/swiper/dist/js/swiper.js',
 			'dev/libs/jquery-ui.min.js',
 			'dev/libs/matchMedia.js',
-			'dev/libs/Animate_css.js',
+			//'dev/libs/Animate_css.js',  // чтобы работало animate.css
+			//'dev/libs/waypoints.min.js', // чтобы работал animate.css
 			'dev/libs/anim-modal.js',
 			'dev/libs/slidebars.min.js',
 			'dev/libs/owl.carousel.min.js',
 			'dev/libs/jquery.sticky.js',
-			'dev/libs/jquery.mCustomScrollbar.concat.min.js',
+			//'dev/libs/jquery.mCustomScrollbar.concat.min.js',
 			'dev/libs/greenSock.js',
 			'dev/libs/DrawSVGPlugin.js'
 		])

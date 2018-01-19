@@ -67,7 +67,7 @@ $(document).ready(function () {
 					})
 				},
 				open: function () {
-					customScrollbar();
+					//customScrollbar();
 					$(".mfp-close-btn-in .mfp-close").tooltipster({
 						theme: 'tooltipster-light'
 					});

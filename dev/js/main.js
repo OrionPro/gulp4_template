@@ -40,19 +40,19 @@ function heightItemSafari(obj) {
 	$(obj.item).css("min-height", heightItem + obj.itemHeightBorder);
 }
 // Создаём цикл для инициализации mCustomScrollbar в нужных select
-function customScrollbar() {
-	$(document).find('.select .drop').each(function () {
-		// var log = '';
-		// var height = $(this).height();
-		// log += 'Высота элементов: ' + height;
-		// console.log(log);
-		if ($(this).height() >= 190) {
-			$(this).mCustomScrollbar({
-				theme: "my-theme"
-			});
-		}
-	});
-}
+// function customScrollbar() {
+// 	$(document).find('.select .drop').each(function () {
+// 		// var log = '';
+// 		// var height = $(this).height();
+// 		// log += 'Высота элементов: ' + height;
+// 		// console.log(log);
+// 		if ($(this).height() >= 190) {
+// 			$(this).mCustomScrollbar({
+// 				theme: "my-theme"
+// 			});
+// 		}
+// 	});
+// }
 
 $(document).ready(function () {
 	svg4everybody({});
@@ -103,8 +103,8 @@ $(document).ready(function () {
 	});
 	// Инициализация маски в input
 	$(".mask").mask("+38(999) 999-99-99");
-
-	customScrollbar();
+	// если использем customScrollbar инициализируем
+	//customScrollbar();
 	// вызов tabs
 	tabs({
 		btn:'.tabs-items-wrap > .tabs-item',

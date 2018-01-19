@@ -230,7 +230,7 @@ li
 		.drop
 			width: 100%
 			max-height: 200px
-			overflow: hidden
+			overflow auto
 			margin: 0 auto
 			padding: 0
 			border-top: none
@@ -254,6 +254,18 @@ li
 					outline: 0
 				a
 					text-decoration: none
+			//внешний вид скроллбара
+			scrollbar-base-color: $main_color   //для IE
+			scrollbar-arrow-color: $main_color	//для IE
+			//внешний вид скроллбара для -webkit- остальное тут https://poselab.com/en/blog/custom-scrollbars-in-webkit/
+			&::-webkit-scrollbar
+				width: 5px
+			&::-webkit-scrollbar-thumb
+				background-color: $main_color
+				&:hover
+					background-color: darken($main_color, 10%)
+			&::-webkit-scrollbar-track-piece
+				background-color: lighten($main_color, 60%)
 		.slct
 			width: 100%
 			height: 40px

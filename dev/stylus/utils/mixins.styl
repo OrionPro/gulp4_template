@@ -75,12 +75,12 @@ css-triangle($color, $direction, $size = 6px, $position = absolute, $round = fal
 		border-top: $size solid transparent
 		border-bottom: $size solid transparent
 		border-left: $size solid $color
-		margin-right: -$size
+		margin-right: -($size)
 	else if  $direction == left
 		border-top: $size solid transparent
 		border-bottom: $size solid transparent
 		border-right: $size solid $color
-		margin-left: -$size
+		margin-left: -($size)
 
 truncate($truncation-boundary)
 	max-width: $truncation-boundary

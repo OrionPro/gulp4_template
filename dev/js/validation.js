@@ -186,6 +186,7 @@ $(document).ready(function () {
 				form = $(this),
 				$inputs = $("#form-file").find('input[type=hidden]'),
 				$phone = $("#form-file").find('input[name=phone]'),
+				$phoneMask = $("#form-file").find('input[name=phone_mask]'),
 				$email = $("#form-file").find('input[name=email]'),
 				$name = $("#form-file").find('input[name=name]'),
 				$textarea = $("#form-file").find('textarea');
@@ -202,6 +203,7 @@ $(document).ready(function () {
 			//добавление основных тестовых полей вместо serialize
 			$data.append($textarea.attr('name'), $textarea.val());
 			$data.append($phone.attr('name'), $phone.val());
+			$data.append($phoneMask.attr('name'), $phoneMask.val());
 			$data.append($email.attr('name'), $email.val());
 			$data.append($name.attr('name'), $name.val());
 

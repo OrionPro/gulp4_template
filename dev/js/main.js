@@ -56,6 +56,13 @@ function heightItemSafari(obj) {
 
 $(document).ready(function () {
 	svg4everybody({});
+	// при клике делаем некликбельным
+	$('label.click-disabled').on('click', function () {
+		var self = $(this);
+		setTimeout(function () {
+			self.find('input').attr('disabled', true);
+		}, 50);
+	});
 
 	$("body").addClass("index ink-transition");
 

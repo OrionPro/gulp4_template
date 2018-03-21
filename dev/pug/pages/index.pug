@@ -28,6 +28,7 @@ block main
 				img(src="img/garant.svg")
 			// пример миксинов
 			+icon('vk')
+			+icon('google-plus')
 			+list('my-list', 'Номер 1', 'Номер 2', 'Номер 3', 'Номер 4')
 			.row
 				+e.item.col-lg-4.col-md-6
@@ -37,7 +38,7 @@ block main
 					p Индивидуальный подход к каждому клиенту
 				+e.item.col-lg-4.col-md-6
 					+e.img
-						i.fa.fa-diamond
+						i.fas.fa-gem
 					h3 Заголовок
 					p Неповторимость и практичность каждого проекта мебели
 				+e.item.col-lg-4.col-md-6
@@ -47,12 +48,12 @@ block main
 					p Многообразие материалов и стилевых решений
 				+e.item.col-lg-4.col-md-6
 					+e.img
-						i.fa.fa-pencil
+						i.fas.fa-pencil-alt
 					h3 Заголовок
 					p Для вас бесплатно: замер, дизайн-проект, доставка и монтаж
 				+e.item.col-lg-4.col-md-6
 					+e.img
-						i.fa.fa-credit-card-alt
+						i.fas.fa-credit-card
 					h3 Заголовок
 					p Возможность оформления мебели в кредит
 				+e.item.col-lg-4.col-md-6
@@ -86,24 +87,32 @@ block main
 			div Пример checkbox
 			label.check.noselect.click-disabled
 				input(type='checkbox')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
+				i.fa-1
+					i.far.fa-square
+				i.fa-2
+					i.far.fa-check-square
 				span первый чек
 			label.check.noselect
 				input(type='checkbox')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
+				i.fa-1
+					i.far.fa-square
+				i.fa-2
+					i.far.fa-check-square
 				span второй чек
 			div Пример radio button
 			label.radio.noselect
 				input(type='radio', name='radio')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
+				i.fa-1
+					i.far.fa-1.fa-square
+				i.fa-2
+					i.far.fa-check-square
 				span первый чек
 			label.radio.noselect
 				input(type='radio', name='radio', checked='')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
+				i.fa-1
+					i.far.fa-square
+				i.fa-2
+					i.far.fa-check-square
 				span второй чек
 			h3 Пример Select на плагине Select2
 				h4 с тегами
@@ -142,15 +151,18 @@ block main
 					.row
 						+e.item.col-lg-3.col-md-4.col-sm-4
 							.input_wrap
-								i.fa.fa-check
+								i
+									i.fa.fa-check
 								input(name='name', type='text', placeholder='Имя')
 						+e.item.col-lg-3.col-md-4.col-sm-4
 							.input_wrap
-								i.fa.fa-check
+								i
+									i.fa.fa-check
 								input(name='email', type='email', placeholder='Почта')
 						+e.item.col-lg-3.col-md-4.col-sm-4
 							.input_wrap
-								i.fa.fa-check
+								i
+									i.fa.fa-check
 								input(name='phone', type='tel', placeholder='Телефон')
 						input(type='hidden', name='form_name', value='')
 						input(type='hidden', name='form_type', value='normal')

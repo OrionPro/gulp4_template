@@ -21,6 +21,7 @@ module.exports = function() {
 			'dev/libs/jquery.sticky.js',
 			//'dev/libs/jquery.mCustomScrollbar.concat.min.js',
 			'dev/libs/greenSock.js',
+			'dev/libs/fontawesome-all.min.js',
 			'dev/libs/DrawSVGPlugin.js'
 		])
 			.pipe($.gp.concat('libs.min.js'))
@@ -52,6 +53,7 @@ module.exports = function() {
 			'dev/libs/jquery.sticky.js',
 			//'dev/libs/jquery.mCustomScrollbar.concat.min.js',
 			'dev/libs/greenSock.js',
+			'dev/libs/fontawesome-all.min.js',
 			'dev/libs/DrawSVGPlugin.js'
 		])
 			.pipe($.gp.concat('libs.min.js'))

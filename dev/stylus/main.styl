@@ -293,16 +293,17 @@ li
 
 		.slct_arrow
 			position: absolute
-			top: 5px
+			top: 7.5px
 			right: 10px
 			cursor: pointer
-			.fa
+			i
 				fz(24)
 				color: #000
+				display: inline-block
 				position: relative
 				z-index: 10
 				transition: 0.3s
-			&.active .fa
+			&.active i
 				transform: rotate(180deg)
 .mfp-zoom-in.mfp-ready.mfp-bg
 	opacity: 0.7
@@ -633,6 +634,7 @@ label.check, label.radio
 		width: 11px
 		display: inline-flex
 		margin-right: 10px
+		font-size: 14px
 	span
 		display: inline-flex
 		font-size: 14px

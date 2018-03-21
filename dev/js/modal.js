@@ -75,7 +75,7 @@ $(document).ready(function () {
 			},
 			closeOnBgClick: true,
 			closeOnContentClick: false,
-			closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i class="fa fa-close"></i></button>',
+			closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i><i class="fas fa-times"></i></i></button>',
 			tClose: 'Закрыть (Esc)',
 		}).magnificPopup('open');
 	});

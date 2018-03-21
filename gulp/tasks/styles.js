@@ -24,10 +24,10 @@ module.exports = function () {
                     message: error.message
                 };
             }))
-            .pipe($.gp.sourcemaps.write())
             .pipe($.gp.autoprefixer({
                 browsers: ['last 3 version']
             }))
+			.pipe($.gp.sourcemaps.write())
             .pipe($.gulp.dest('./build/css/'))
             .pipe($.browserSync.reload({
                 stream: true

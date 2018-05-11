@@ -3,8 +3,9 @@ function tabs(obj) {
 	const buttons = document.querySelectorAll(obj.btn);
 	const bodyTabs = document.querySelectorAll(obj.tabsBody);
 
-	let func = function(){
+	let func = function(e){
 		"use strict";
+		e.preventDefault();
 		for( let i = buttons.length; i--; ){
 			buttons[i].classList.remove(obj.classBtn);
 			bodyTabs[i].classList.remove(obj.classBody);

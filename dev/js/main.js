@@ -1,18 +1,19 @@
 // табы tabs
 function tabs(obj) {
 	const buttons = document.querySelectorAll(obj.btn);
-	const bodyTabs = document.querySelectorAll(obj.tabsBody);
 
 	let func = function(e){
 		"use strict";
 		e.preventDefault();
-		for( let i = buttons.length; i--; ){
-			buttons[i].classList.remove(obj.classBtn);
-			bodyTabs[i].classList.remove(obj.classBody);
+		const thisButtons = this.parentNode.parentNode.querySelectorAll(obj.btn);
+		const thisBodyTabs = this.parentNode.parentNode.querySelectorAll(obj.tabsBody);
+		for( let i = thisButtons.length; i--; ){
+			thisButtons[i].classList.remove(obj.classBtn);
+			thisBodyTabs[i].classList.remove(obj.classBody);
 		}
 		this.classList.add(obj.classBtn);
-		let item = [].indexOf.call(buttons,this);
-		bodyTabs[item].classList.add(obj.classBody)
+		let item = [].indexOf.call(thisButtons,this);
+		thisBodyTabs[item].classList.add(obj.classBody)
 	};
 
 	[].forEach.call(buttons,item => item.addEventListener('click',func));

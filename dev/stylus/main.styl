@@ -23,7 +23,10 @@ html .loader .loader_inner {
 	top: 50%;
 	position: absolute
 }
-@import '../libs/bootstrap.min.css'
+.clearfix::after{display:block;content:""}
+.img-fluid{max-width: 100%;height: auto;}
+
+@import '../libs/bootstrap-grid.min.css'
 @import 'utils/fonts.styl'
 @import 'utils/vars.styl'
 @import 'utils/mixins.styl'
@@ -46,6 +49,9 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
+
+button:not(:disabled):not(.disabled)
+	cursor: pointer
 
 *::-webkit-input-placeholder
 	color: #666
@@ -597,6 +603,16 @@ nav[canvas]
 				fz(16)
 				text-decoration: none
 				transition: .5s
+				&:hover
+					color: $main_color
+					text-decoration: none
+				&:active
+					color: $main_color
+					text-decoration: none
+				&:focus
+					color: $main_color
+					text-decoration: none
+
 .header__modal
 	display: inline-block
 	&.last

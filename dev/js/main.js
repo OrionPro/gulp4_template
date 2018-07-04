@@ -66,7 +66,7 @@ $(document).ready(function () {
 		}, 50);
 	});
 
-	$("body").addClass("index ink-transition");
+	$("body").addClass("ink-transition");
 
 	$(".sticky").sticky({
 		topSpacing: 0,

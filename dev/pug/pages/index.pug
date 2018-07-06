@@ -26,6 +26,20 @@ block main
 			+e.title
 				h2 Наши преимущества
 				img(src="img/garant.svg")
+				.select
+					.slct_arrow
+						i
+							i.fas.fa-angle-down
+					a(href="#" class="slct") Пример селекта не в модальном окне):
+					ul.drop
+						li Вы крутые
+						li Вы крутые
+						li Я в Вас влюбился
+						li Я в Вас влюбился
+						li Быстрей Вас только Флеш
+						li Быстрей Вас только Флеш
+						li Быстрей Вас только Флеш
+					input(type="hidden" name="services")
 			// пример миксинов
 			+icon('vk')
 			+icon('google-plus')

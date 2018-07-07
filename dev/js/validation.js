@@ -149,7 +149,7 @@ $(document).ready(function () {
 						setTimeout(function () {
 							$('.white-popup form').show();
 							$('.white-popup .mfp-close').show();
-							$('.white-popup .input_wrap i').hide();
+							$('.white-popup .input-wrap i').hide();
 							$('.white-popup .success_mail').removeClass('active');
 							self.find('input[type="submit"]').attr('disabled', false);
 						}, 3500);
@@ -164,7 +164,7 @@ $(document).ready(function () {
 						});
 						setTimeout(function () {
 							$.magnificPopup.close();
-							$('form .input_wrap i').hide();
+							$('form .input-wrap i').hide();
 							self.find('input[type="submit"]').attr('disabled', false);
 						}, 3000);
 					}

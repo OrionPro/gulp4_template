@@ -171,14 +171,16 @@ li
 				color: #fff
 		.mfp-close
 			display: none
-	.input_wrap
+	.input-wrap
 		position: relative
 		display: block
+		margin-bottom: 10px
 		i
 			display: none
 			position: absolute
-			top: 15px
+			top: 50%
 			right: 16px
+			transform translateY(-45%)
 			fz(14)
 			color: #35be70
 	label
@@ -194,7 +196,6 @@ li
 	input
 		width: 100%
 		height: 40px
-		margin-bottom: 10px
 		padding-left: 20px
 		padding-right: 37px
 		color: #3a4763
@@ -302,7 +303,7 @@ li
 			top: 50%
 			right: 10px
 			cursor: pointer
-			transform: translateY(-50%)
+			transform: translateY(-45%)
 			z-index: 10
 			i
 				fz(24)
@@ -338,7 +339,7 @@ li
 		outline: 0
 // конец модального
 // для формы normal обёртка и иконка success
-.input_wrap
+.input-wrap
 	position: relative
 	display: block
 	i
@@ -554,7 +555,7 @@ label
 		top: 50%
 		right: 10px
 		cursor: pointer
-		transform: translateY(-50%)
+		transform: translateY(-45%)
 		z-index: 10
 		i
 			fz(24)

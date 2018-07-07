@@ -179,24 +179,24 @@ block main
 				h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
 			+e.wrap
 				form#form-file.clearfix
-					.input_wrap
+					.input-wrap.file-wrap
 						input(type='file' value='' multiple='' accept='image/*' name="field")
 						.fileLoad
 							input(type='text' id="file" value='Выберите файл')
 							button(type='button' class="main-btn") ЗАГРУЗИТЬ ФОТО
 					.row
 						+e.item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
+							.input-wrap
 								i
 									i.fa.fa-check
 								input(name='name', type='text', placeholder='Имя')
 						+e.item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
+							.input-wrap
 								i
 									i.fa.fa-check
 								input(name='email', type='email', placeholder='Почта')
 						+e.item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
+							.input-wrap
 								i
 									i.fa.fa-check
 								input(name='phone', type='tel', placeholder='Телефон')

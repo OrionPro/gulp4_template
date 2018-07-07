@@ -50,6 +50,34 @@ button
 	&.main-btn
 		display: inline-block
 
+.main-input
+	width: 100%
+	height: 44px
+	border: 1px solid #b6b6b6
+	padding-left: 15px
+	border-radius: 5px
+	font-size: 16px
+	color: $main_txt_color
+	font-family: $font_main_regular
+	text-indent: 0
+	transition: 0.5s
+	&.main-input_higher
+		height: 56px
+	&.main-input_textarea
+		min-height: 160px
+		padding-top: 15px
+		overflow: hidden
+		white-space: nowrap
+		resize none
+	&:hover
+		outline: 0
+	&:active
+		border: 1px solid $main_color
+		outline: 0
+	&:focus
+		border: 1px solid $main_color
+		outline: 0
+
 .flex-center
 	display: flex
 	align-items: center

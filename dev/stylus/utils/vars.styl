@@ -18,12 +18,15 @@ $font_main_regular = "RobotoRegular",-apple-system,system-ui,BlinkMacSystemFont,
 	min-width: 272px
 	height: 49px
 	padding: 0 5px
+	display: inline-flex
+	justify-content: center
+	align-items: center
 	border: 1px solid transparent
 	background-color: $main_color
 	text-transform: none
 	border-radius: 5px
 	font(#fff, 16, $font_main_regular)
-	line-height: 45px
+	text-decoration: none
 	transition: 0.5s
 	&:hover
 		background-color: #fff
@@ -43,7 +46,9 @@ $font_main_regular = "RobotoRegular",-apple-system,system-ui,BlinkMacSystemFont,
 		color: $main_txt_color
 		text-decoration: none
 		outline: 0
-
+button
+	&.main-btn
+		display: inline-block
 
 .flex-center
 	display: flex

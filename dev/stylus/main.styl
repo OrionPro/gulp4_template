@@ -247,7 +247,7 @@ li
 			display: none
 			position: absolute
 			background-color: #F4F4F4
-			top: 50px
+			top: 100%
 			left: 0
 			right: 0
 			z-index: 12
@@ -286,17 +286,17 @@ li
 			font(#000, 18, $font_main_regular, 1.2)
 			background-color: #F4F4F4
 			box-shadow: 0 1px 0 rgba(0,0,2,.28)
-			overflow: hidden
-			white-space: nowrap
-			text-overflow: ellipsis
-			-o-text-overflow: ellipsis
 			text-decoration: none
 			position: relative
 			transition: color 1s
 			&.active
 				color: #000
 				background-color: #F4F4F4
-
+			span
+				overflow: hidden
+				white-space: nowrap
+				text-overflow: ellipsis
+				-o-text-overflow: ellipsis
 		.slct_arrow
 			position: absolute
 			top: 50%
@@ -344,8 +344,9 @@ li
 	i
 		display: none
 		position: absolute
-		top: 15px
+		top: 50%
 		right: 16px
+		transform translateY(-45%)
 		font-size: 14px
 		color: #35be70
 #form-file
@@ -498,7 +499,7 @@ label
 		display: none
 		position: absolute
 		background-color: #F4F4F4
-		top: 50px
+		top: 100%
 		left: 0
 		right: 0
 		z-index: 12
@@ -537,16 +538,17 @@ label
 		align-items: center
 		font(#fff, 18, $font_main_regular, 1.2)
 		background-color: rgba(0,0,0,0.6)
-		overflow: hidden
-		white-space: nowrap
-		text-overflow: ellipsis
-		-o-text-overflow: ellipsis
 		text-decoration: none
 		position: relative
 		transition: color, background-color, 1s
 		&.active
 			color: #000
 			background-color: #F4F4F4
+		span
+			overflow: hidden
+			white-space: nowrap
+			text-overflow: ellipsis
+			-o-text-overflow: ellipsis
 	.slct_arrow
 		position: absolute
 		top: 50%

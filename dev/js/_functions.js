@@ -126,7 +126,7 @@ $(document).ready(function () {
 				/* Заносим в переменную HTML код элемента
 				 списка по которому кликнули */
 				const selectAllResult = $(this).html();
-				const selectText = $(this).text();
+				const selectText = $(this).find('span').text();
 
 				/* Передаем значение переменной selectAllResult в ссылку которая
 				 открывает наш выпадающий список и удаляем активность */

@@ -58,6 +58,23 @@ function heightItemSafari(obj) {
 
 $(document).ready(function () {
 	svg4everybody({});
+	// вводим только цифры
+	$("input.only-num").keydown(function (event) {
+		// Разрешаем нажатие клавиш backspace, Del, Tab и Esc
+		if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 ||
+			// Разрешаем выделение: Ctrl+A
+			(event.keyCode == 65 && event.ctrlKey === true) ||
+			// Разрешаем клавиши навигации: Home, End, Left, Right
+			(event.keyCode >= 35 && event.keyCode <= 39)) {
+			return;
+		}
+		else {
+			// Запрещаем всё, кроме клавиш цифр на основной клавиатуре, а также Num-клавиатуре
+			if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+				event.preventDefault();
+			}
+		}
+	});
 	// при клике делаем некликбельным
 	$('label.click-disabled').on('click', function () {
 		var self = $(this);

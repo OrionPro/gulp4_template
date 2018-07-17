@@ -93,8 +93,14 @@ body
 //-webkit-font-smoothing: antialiased
 //-moz-osx-font-smoothing: grayscale
 
+// перебиваем у всех заголовков стили браузера  -webkit-margin-before и     -webkit-margin-after  (margin-bottom и margin-top соотвественно)
 h1
 	font($main_color, 28, $font_main_regular, 1.2)
+	margin-bottom: 0.83em
+	margin-top: 0.83em
+h2
+	margin-bottom: 0.83em
+	margin-top: 0.83em
 p,ul
 	padding: 0
 	margin: 0

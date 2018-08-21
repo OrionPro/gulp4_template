@@ -18,6 +18,20 @@ function tabs(obj) {
 
 	[].forEach.call(buttons,item => item.addEventListener('click',func));
 }
+// ограничение символов
+function limitSymbol(obj){
+	$.each($(obj.elem), function () {
+		var self = $(this).text();
+		var str = self.slice(0, obj.maxSymbol); //например макс 100 символов
+		var a = str.split(' ');
+		a.splice(a.length - 1, 1);
+		str = a.join(' ');
+		if ($(this).text().length >= obj.maxSymbol + 10) {
+			$(this).addClass(obj.activeClass); // добавляем активный класс по надобности
+			$(this).html(str + ' ...');
+		}
+	});
+}
 // Определения браузера
 function get_name_browser() {
 	// получаем данные userAgent
@@ -57,6 +71,13 @@ function heightItemSafari(obj) {
 // }
 
 $(document).ready(function () {
+	// пример limitSymbol
+	limitSymbol({
+		elem: '.tabs-all-items-wrap .tabs-wrap p',
+		maxSymbol: 150,
+		activeClass: 'trim'
+	});
+	// инициализация svg4everybody ,смотреть в описании к шаблону или видео
 	svg4everybody({});
 	// вводим только цифры
 	$("input.only-num").keydown(function (event) {

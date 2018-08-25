@@ -106,10 +106,8 @@ $(document).ready(function () {
 
 	$("body").addClass("ink-transition");
 
-	$(".sticky").sticky({
-		topSpacing: 0,
-		widthFromWrapper: false
-	});
+	//sticky
+	var sticky = new Sticky('.sticky');
 	// пример анимации через библиотечку animat (но лучше анимировать через GSAP)
 	//$('.our-advantages h2').animated("fadeInUp");
 

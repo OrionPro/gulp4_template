@@ -34,15 +34,9 @@
 	margin-top: 50px
 	flex: 1 0 auto
 	p
-		fz(25)
+		fz(23)
 		color: #fff
-	.is-sticky
-		p
-			margin: auto
-			left: 0
-			right: 0
-			z-index: 1000 !important
-			background: #000
+		transition: 0.5s
 // Секция our_advantages
 .our-advantages
 	min-height: 630px
@@ -52,9 +46,16 @@
 		margin-bottom: 10px
 		text-align: center
 		h2
+			margin: 0
 			color: #626262
 			text-align: center
 			font-size: 35px
+			transition: background 0.5s, font-size 0.5s, color 0.5s
+		.is-sticky
+			z-index: 1000 !important
+			background: #000
+			color: #ffffff
+			font-size: 20px
 	.our-advantages__item
 		margin-bottom: 30px
 		min-height: 230px

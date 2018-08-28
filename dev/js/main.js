@@ -21,9 +21,9 @@ function tabs(obj) {
 // ограничение символов
 function limitSymbol(obj){
 	$.each($(obj.elem), function () {
-		var self = $(this).text();
-		var str = self.slice(0, obj.maxSymbol); //например макс 100 символов
-		var a = str.split(' ');
+		const self = $(this).text();
+		let str = self.slice(0, obj.maxSymbol); //например макс 100 символов
+		const a = str.split(' ');
 		a.splice(a.length - 1, 1);
 		str = a.join(' ');
 		if ($(this).text().length >= obj.maxSymbol + 10) {

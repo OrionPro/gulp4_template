@@ -1,22 +1,56 @@
 // табы tabs
+// для parents в чистом js
+// matches это для IE ибо в parents применяется проверка
+;(function(e) {
+	var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
+	!matches ? (e.matches = e.matchesSelector = function matches(selector) {
+		var matches = document.querySelectorAll(selector);
+		const th = this;
+		return Array.prototype.some.call(matches, function(e) {
+			return e === th;
+		});
+	}) : (e.matches = e.matchesSelector = matches);
+})(Element.prototype);
+
+Element.prototype.parents = function(selector) {
+	let elements = [];
+	let elem = this;
+	const ishaveselector = selector !== undefined;
+
+	while ((elem = elem.parentElement) !== null) {
+		if (elem.nodeType !== Node.ELEMENT_NODE) {
+			continue;
+		}
+
+		if (!ishaveselector || elem.matches(selector)) {
+			elements.push(elem);
+		}
+	}
+
+	return elements;
+};
+
 function tabs(obj) {
 	const buttons = document.querySelectorAll(obj.btn);
 
-	let func = function(e){
+	let func = function (e) {
 		"use strict";
 		e.preventDefault();
+		// AllWrap - общий родитель, его можно упустить в инициализации, если придерживаться стандартной разметки
+		const thisAllWrap = obj.AllWrap ? this.parents(obj.AllWrap)[0] : this.parentNode.parentNode;
 		const thisButtons = this.parentNode.parentNode.querySelectorAll(obj.btn);
-		const thisBodyTabs = this.parentNode.parentNode.querySelectorAll(obj.tabsBody);
-		for( let i = thisButtons.length; i--; ){
+		const thisBodyTabs = thisAllWrap.querySelectorAll(obj.tabsBody);
+
+		for (let i = thisButtons.length; i--;) {
 			thisButtons[i].classList.remove(obj.classBtn);
 			thisBodyTabs[i].classList.remove(obj.classBody);
 		}
 		this.classList.add(obj.classBtn);
-		let item = [].indexOf.call(thisButtons,this);
+		let item = [].indexOf.call(thisButtons, this);
 		thisBodyTabs[item].classList.add(obj.classBody)
 	};
 
-	[].forEach.call(buttons,item => item.addEventListener('click',func));
+	[].forEach.call(buttons, item => item.addEventListener('click', func));
 }
 // ограничение символов
 function limitSymbol(obj){

@@ -36,7 +36,7 @@ function tabs(obj) {
 	let func = function (e) {
 		"use strict";
 		e.preventDefault();
-		// AllWrap - общий родитель, его можно упустить в инициализации, если придерживаться стандартной разметки
+		// AllWrap - общий родитель, его можно упустить в инициализации, если придерживаться стандартной разметки, когда обёртка кнопок (ссылок) таба и есть общий родитель(т.е. .parentNode.parentNode у кнопки находит сразу общего родителя)
 		const thisAllWrap = obj.AllWrap ? this.parents(obj.AllWrap)[0] : this.parentNode.parentNode;
 		const thisButtons = this.parentNode.parentNode.querySelectorAll(obj.btn);
 		const thisBodyTabs = thisAllWrap.querySelectorAll(obj.tabsBody);

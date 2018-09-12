@@ -14,11 +14,11 @@ class Animation {
 
 	}
 
-	activeSection(section, startTop = 0, startBotton = 0) {
+	activeSection(section, startTop = 0, startBottom = 0) {
 		section = '.' + section;
 		if ($(section).offset() !== undefined) {
 			var topPosition = $(section).offset().top - startTop,
-				bottomPosition = $(section).offset().top + $(section).height() - startBotton;
+				bottomPosition = $(section).offset().top + $(section).height() - startBottom;
 			if (($(window).scrollTop() >= topPosition) && ($(window).scrollTop() <= bottomPosition)) {
 				return true;
 			}

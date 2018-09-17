@@ -730,6 +730,16 @@ nav[canvas]
 			color: #fff
 
 // Пример checkbox
+@keyframes checkColor
+	from
+		color: #727272
+	to
+		color: $main_color
+@keyframes checkColorBack
+	from
+		color: $main_color
+	to
+		color: #000
 label.check, label.radio
 	display: inline-flex
 	align-items: center
@@ -742,6 +752,10 @@ label.check, label.radio
 		display: inline-flex
 		margin-right: 10px
 		font-size: 14px
+		animation: checkColorBack
+		animation-duration: 0.7s
+		animation-direction alternate
+		animation-fill-mode forwards
 	span
 		display: inline-flex
 		font-size: 14px
@@ -750,11 +764,15 @@ label.check, label.radio
 		display: none
 		&:not(:checked)  ~ .fa-2
 			display: none
-		&:checked + i
+		&:checked ~ i
 			&.fa-1
 				display: none
 			&.fa-2
 				display: inline-flex
+				animation: checkColor
+				animation-duration: 0.7s
+				animation-direction alternate
+				animation-fill-mode forwards
 
 //	Секция
 //	Секция

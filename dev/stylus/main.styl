@@ -586,23 +586,20 @@ label
 	display: none
 	padding: 20px
 	background-color: rgba(255, 255, 255,0.5)
-
-.tabs-wrap.active
-	display: block
-	animation: fade-bot
-	animation-duration: 0.7s
+	&.active
+		display: block
+		animation: fade-bot
+		animation-duration: 0.7s
 
 .tabs-wrap-inner
 	display: none
 	padding: 20px
-
-.tabs-wrap-inner.active
-	display: block
-	animation: fade
-	animation-duration: 0.7s
-	animation-delay: 0.3s
-	animation-fill-mode: backwards
-
+	&.active
+		display: block
+		animation: fade
+		animation-delay: 0.3s
+		animation-fill-mode: backwards
+		animation-duration: 0.7s!important // почему то при build стили объединяются с .tabs-wrap и не работает animation-duration, приходится !important применять
 @keyframes fade
 	from
 		opacity: 0

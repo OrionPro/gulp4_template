@@ -114,7 +114,8 @@ $(document).ready(function () {
 	// инициализация svg4everybody ,смотреть в описании к шаблону или видео
 	svg4everybody({});
 	// вводим только цифры
-	$("input.only-num").keydown(function ({keyCode, ctrlKey} = event) {
+	$("input.only-num").on('keydown', function ({keyCode,ctrlKey} = e) {
+
 		// Разрешаем нажатие клавиш backspace, Del, Tab и Esc
 		if (keyCode == 46 || keyCode == 8 || keyCode == 9 || keyCode == 27 ||
 			// Разрешаем выделение: Ctrl+A

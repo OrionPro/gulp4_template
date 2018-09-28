@@ -114,18 +114,18 @@ $(document).ready(function () {
 	// инициализация svg4everybody ,смотреть в описании к шаблону или видео
 	svg4everybody({});
 	// вводим только цифры
-	$("input.only-num").keydown(function (event) {
+	$("input.only-num").keydown(function ({keyCode, ctrlKey} = event) {
 		// Разрешаем нажатие клавиш backspace, Del, Tab и Esc
-		if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 ||
+		if (keyCode == 46 || keyCode == 8 || keyCode == 9 || keyCode == 27 ||
 			// Разрешаем выделение: Ctrl+A
-			(event.keyCode == 65 && event.ctrlKey === true) ||
+			(keyCode == 65 && ctrlKey === true) ||
 			// Разрешаем клавиши навигации: Home, End, Left, Right
-			(event.keyCode >= 35 && event.keyCode <= 39)) {
+			(keyCode >= 35 && keyCode <= 39)) {
 			return;
 		}
 		else {
 			// Запрещаем всё, кроме клавиш цифр на основной клавиатуре, а также Num-клавиатуре
-			if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+			if ((keyCode < 48 || keyCode > 57) && (keyCode < 96 || keyCode > 105)) {
 				event.preventDefault();
 			}
 		}
@@ -173,6 +173,7 @@ $(document).ready(function () {
 	$(".select2").select2({
 		//minimumResultsForSearch: -1, // выключам поле ввода поиска
 		tags: false,
+		placeholder: "Выберите язык",
 		width: '100%'
 	});
 	$(".select2-tags").select2({

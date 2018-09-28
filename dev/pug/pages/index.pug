@@ -163,7 +163,9 @@ block main
 						option backbone
 				h4 обычный
 				.select2-wrap
+					// оставляем пустой option чтобы сработал при инициализации placeholder прописанный в js
 					select.select2
+						option
 						option angular
 						option react
 						option vue
@@ -201,7 +203,7 @@ block main
 							.input-wrap
 								i
 									i.fa.fa-check
-								input(name='phone', type='tel', placeholder='Телефон')
+								input(name='phone', type='tel', placeholder='Телефон' class="only-num")
 						input(type='hidden', name='form_name', value='')
 						input(type='hidden', name='form_type', value='normal')
 						+e.item.col-lg-3

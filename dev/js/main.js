@@ -142,6 +142,7 @@ $(document).ready(function () {
 	$("body").addClass("ink-transition");
 
 	//sticky
+	// не забываем, что нужно делать прилипающим сам элемент, а не его обёртку
 	var sticky = new Sticky('.sticky');
 	// пример анимации через библиотечку animat (но лучше анимировать через GSAP)
 	//$('.our-advantages h2').animated("fadeInUp");

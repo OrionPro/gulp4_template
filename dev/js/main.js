@@ -86,8 +86,8 @@ function get_name_browser() {
 }
 // решаем вопрос с min-height 100% у safari до версии 11
 function heightItemSafari(obj) {
-	let heightItem =  $(obj.itemHeight).height();
-	$(obj.item).css("min-height", heightItem + obj.itemHeightBorder);
+	let heightItem =  $(obj.itemHeight).outerHeight();
+	$(obj.item).css("min-height", heightItem );
 }
 // Создаём цикл для инициализации mCustomScrollbar в нужных select
 // function customScrollbar() {
@@ -217,7 +217,6 @@ $(document).ready(function () {
 		console.log("Safari");
 		// heightItemSafari({
 		// 	itemHeight: '.info-blocks__item-txt-block',
-		// 	itemHeightBorder: 2,
 		// 	item:  '.info-blocks__btn'
 		// });
 	}

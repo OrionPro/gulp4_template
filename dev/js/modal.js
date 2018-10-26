@@ -56,7 +56,7 @@ $(document).ready(function () {
 					$('input:not("[type=submit], [type=hidden], .select2-search__field")').removeClass('tooltipster-show').tooltipster('close');
 				},
 				close: function () {
-					$('.white-popup .input-wrap i').hide();
+					$('.white-popup .input-wrap > i').hide();
 					if (get_name_browser() == "Google Chrome") {
 						$("html").removeClass("modal");
 					}

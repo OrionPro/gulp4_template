@@ -259,11 +259,12 @@ li
 			right: 0
 			z-index: 12
 			li
+				display: flex
+				align-items: center
 				list-style: none
 				border-bottom: none
 				border-top: none
 				cursor: pointer
-				display: block
 				font($auxiliary_txt_color, 18, $font_main_regular, 1.2)
 				padding: 7px 15px 7px 25px
 				&:hover
@@ -271,6 +272,8 @@ li
 					outline: 0
 				a
 					text-decoration: none
+				img
+					margin-right: 10px
 			//внешний вид скроллбара
 			scrollbar-base-color: $main_color   //для IE
 			scrollbar-arrow-color: $main_color	//для IE
@@ -304,6 +307,8 @@ li
 				white-space: nowrap
 				text-overflow: ellipsis
 				-o-text-overflow: ellipsis
+			img
+				margin-right: 10px
 		.slct_arrow
 			position: absolute
 			top: 50%

@@ -91,7 +91,7 @@ function heightItemSafari(obj) {
 }
 // Создаём цикл для инициализации mCustomScrollbar в нужных select
 // function customScrollbar() {
-// 	$(document).find('.select .drop').each(function () {
+// 	$(document).find('.select .select__drop').each(function () {
 // 		// var log = '';
 // 		// var height = $(this).height();
 // 		// log += 'Высота элементов: ' + height;

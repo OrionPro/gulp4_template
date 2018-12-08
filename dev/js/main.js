@@ -275,7 +275,7 @@ $(window).scroll(function () {
 
 });
 
-setTimeout(function () {
-	$(".loader_inner").fadeOut();
-	$(".loader").fadeOut("slow");
-}, 500);
+// setTimeout(function () {
+// 	$(".loader_inner").fadeOut();
+// 	$(".loader").fadeOut("fast");
+// },100);

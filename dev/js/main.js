@@ -1,3 +1,33 @@
+// функция throttle
+function throttle(func, ms) {
+
+	var isThrottled = false,
+		savedArgs,
+		savedThis;
+
+	function wrapper() {
+
+		if (isThrottled) { // (2)В этом состоянии все новые вызовы запоминаются в замыкании через savedArgs/savedThis. Обратим внимание, что и контекст вызова и аргументы для нас одинаково важны и запоминаются одновременно. Только зная и то и другое, можно воспроизвести вызов правильно.
+			savedArgs = arguments;
+			savedThis = this;
+			return;
+		}
+
+		func.apply(this, arguments); // (1)Декоратор throttle возвращает функцию-обёртку wrapper, которая при первом вызове запускает func и переходит в состояние «паузы» (isThrottled = true).
+
+		isThrottled = true;
+
+		setTimeout(function () {
+			isThrottled = false; // (3)Далее, когда пройдёт таймаут ms миллисекунд – пауза будет снята, а wrapper – запущен с последними аргументами и контекстом (если во время паузы были вызовы).
+			if (savedArgs) {
+				wrapper.apply(savedThis, savedArgs);
+				savedArgs = savedThis = null;
+			}
+		}, ms);
+	}
+
+	return wrapper;
+}
 // табы tabs
 // для parents в чистом js
 // matches это для IE ибо в parents применяется проверка
@@ -266,6 +296,10 @@ $(document).ready(function () {
 	//     owl.trigger('prev.owl.carousel', [700]);
 	// });
 });
+
+$(window).on('resize', throttle(function () {
+	// здесь затормаживаем функции
+}, 150));
 
 $(window).resize(function () {
 

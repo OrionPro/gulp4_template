@@ -408,9 +408,13 @@ li
 		outline none
 		outline-color: transparent
 .select2-container--default .select2-results__option
-	transition: 0.3s
 	font-size: 14px
+	truncate(100%)
 	padding-left: 28px
+	transition: 0.3s
+	span
+		truncate(100%)
+		display: inline-block
 .select2-container--default .select2-results__option--highlighted[aria-selected]
 	background-color: $main_color
 .select2-container--default .select2-results>.select2-results__options

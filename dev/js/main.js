@@ -135,6 +135,19 @@ function heightItemSafari(obj) {
 // }
 
 $(document).ready(function () {
+	// функция для парсинга xml
+	function parsing() {
+		var name = $('.parsing-section offers offer name');
+		console.log(name);
+		name.each(function (e) {
+			if($(this).text().match(/.*?Пластик матовый/) || $(this).text().match(/.*?Пластик глянец/)) {
+				$(this).parents('offer').remove();
+			}
+		});
+	}
+	parsing();
+
+
 	// пример limitSymbol
 	limitSymbol({
 		elem: '.tabs-all-items-wrap .tabs-wrap p',

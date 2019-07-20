@@ -504,6 +504,15 @@ label
 .select
 	position: relative
 	text-align: left
+	.select__static-txt
+		position: absolute
+		top: 48%
+		left: 15px
+		transform translateY(-50%)
+		font-family: $font_NeoSansCyr-Regular
+		cursor: pointer
+		pointer-events: none
+		z-index: 1
 	.select__drop
 		width: 100%
 		max-height: 200px

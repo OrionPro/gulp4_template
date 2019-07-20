@@ -71,6 +71,8 @@ $(document).ready(function () {
 					$(".mfp-close-btn-in .mfp-close").tooltipster({
 						theme: 'tooltipster-light'
 					});
+					//
+					selectStaticTxt();
 				}
 			},
 			closeOnBgClick: true,

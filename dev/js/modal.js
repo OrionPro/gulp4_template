@@ -53,14 +53,14 @@ $(document).ready(function () {
 			callbacks: {
 				beforeOpen: function () {
 					this.st.mainClass = this.st.el.attr('data-effect');
-					$('input:not("[type=submit], [type=hidden], .select2-search__field")').removeClass('tooltipster-show').tooltipster('close');
+					$('input[class~=tooltipstered]').removeClass('tooltipster-show').tooltipster('close');
 				},
 				close: function () {
 					$('.white-popup .input-wrap > i').hide();
 					if (get_name_browser() == "Google Chrome") {
 						$("html").removeClass("modal");
 					}
-					$('input:not("[type=submit], [type=hidden], .select2-search__field")').removeClass('tooltipster-show').tooltipster('close');
+					$('input[class~=tooltipstered]').removeClass('tooltipster-show').tooltipster('close');
 					// Это код закрытия эффекта красивого при открытии и закрытии модалки
 					// $(".cd-transition-layer").addClass("closing"), $("#popup").removeClass("visible"), $(".cd-transition-layer").children().one("webkitAnimationEnd oanimationend msAnimationEnd animationend", function () {
 					// 	$(".cd-transition-layer").removeClass("closing opening visible"), $(".cd-transition-layer").children().off("webkitAnimationEnd oanimationend msAnimationEnd animationend")

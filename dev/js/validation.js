@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	//  Отправка форм
 // initialize tooltipster on text input elements
-	$('input:not("[type=submit], [type=hidden], [type=file]")').tooltipster({
+	$('input:not("[type=submit], [type=hidden], [type=file], [type=checkbox], [type=radio], .select2-search__field")').tooltipster({
 		trigger: 'none', // чтобы при ховере и клике не вылетало окошко с ошибкой ставим none. Либо hover/click по надобности
 		position: 'bottom',
 		theme: 'tooltipster-shadow',

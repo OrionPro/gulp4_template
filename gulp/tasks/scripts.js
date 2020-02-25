@@ -57,7 +57,7 @@ module.exports = function() {
 			'dev/libs/DrawSVGPlugin.js'
 		])
 			.pipe($.gp.concat('libs.min.js'))
-			.pipe($.gp.uglify())
+			.pipe($.gp.terser())
 			.pipe($.gulp.dest('./build/js/'));
 	});
 
@@ -73,7 +73,7 @@ module.exports = function() {
 				presets: ['es2015', 'stage-3']
 			}))
 			.pipe($.gp.concat('main.js'))
-			.pipe($.gp.uglify())
+			.pipe($.gp.terser())
 			.pipe($.gulp.dest('./build/js/'))
 			.pipe($.browserSync.reload({
 				stream: true

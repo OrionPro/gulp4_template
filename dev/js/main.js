@@ -133,8 +133,17 @@ function heightItemSafari(obj) {
 // 		}
 // 	});
 // }
+// селекты с статическим текстом
+function selectStaticTxt() {
+	$(".select.select__static_txt").each(function () {
+		const widthSpan = $(this).find("span.select__static-txt").width();
+		$(this).find('.select__link').css('paddingLeft', widthSpan + 20);
+	});
+}
 
 $(document).ready(function () {
+	// вызов
+	selectStaticTxt();
 	// пример limitSymbol
 	limitSymbol({
 		elem: '.tabs-all-items-wrap .tabs-wrap p',

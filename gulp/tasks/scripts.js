@@ -79,4 +79,20 @@ module.exports = function() {
 				stream: true
 			}));
 	});
+
+	$.gulp.task('js:vue', () => {
+		return $.gulp.src([
+			'node_modules/vue/dist/vue.min.js',
+			'node_modules/@trevoreyre/autocomplete-vue/dist/autocomplete.min.js',
+			'./dev/js/vue.js',])
+			.pipe($.babel({
+				presets: ['es2015', 'stage-3']
+			}))
+			.pipe($.gp.concat('vue.build.js'))
+			.pipe($.gp.terser())
+			.pipe($.gulp.dest('./build/js/'))
+			.pipe($.browserSync.reload({
+				stream: true
+			}));
+	});
 };

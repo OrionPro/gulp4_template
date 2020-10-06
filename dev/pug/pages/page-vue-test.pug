@@ -1,0 +1,14 @@
+extends ../layout/main
+
+block variables
+	- var title = 'page-vue-test'
+	- var pageClass = ''
+	- var stickyClass = ''
+
+block main
+	#app-vue
+		h1 Заголовок вне компонента "autocomplete"
+		autocomplete(:search="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" :get-result-value="getResultValue" @submit="onSubmit")
+block script
+	script(src="js/vue.build.js")
+

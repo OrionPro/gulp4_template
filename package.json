@@ -35,6 +35,7 @@
     "gulp-tinypng": "^1.0.2"
   },
   "dependencies": {
+    "@trevoreyre/autocomplete-vue": "^2.2.0",
     "cryptiles": "^4.1.2",
     "extend": "^3.0.2",
     "hoek": "^5.0.3",
@@ -53,6 +54,7 @@
     "svg4everybody": "^2.1.9",
     "swiper": "^4.2.2",
     "tooltipster": "^4.2.6",
-    "tooltipster-follower": "^0.1.5"
+    "tooltipster-follower": "^0.1.5",
+    "vue": "^2.6.12"
   }
 }
